@@ -12,6 +12,8 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.5.5",
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/themes": "^2.0.0",
     "@types/mdx": "^2.0.8",
     "next": "13.5.5",
     "react": "^18",
@@ -31,6 +33,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "postcss": "^8",
+    "radix-themes-tw": "^0.0.8",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
