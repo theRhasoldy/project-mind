@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-bronze-5 flex min-h-screen flex-col items-center justify-between p-24">
-      <Button color="plum">Mama</Button>
+    <main>
+      <Button>Mama</Button>
     </main>
   );
 }
