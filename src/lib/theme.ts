@@ -5,11 +5,18 @@ import config from "../../tailwind.config";
 const tailwindConfig = resolveConfig(config);
 const colors = tailwindConfig.theme?.colors;
 
-const theme = createTheme({
+export const lightTheme = createTheme({
   palette: {
-    primary: colors?.primary as PaletteColorOptions,
-    secondary: colors?.secondary as PaletteColorOptions,
+    mode: "light",
+    primary: colors?.light?.primary as PaletteColorOptions,
+    secondary: colors?.light?.secondary as PaletteColorOptions,
   },
 });
 
-export default theme;
+export const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: colors?.dark?.primary as PaletteColorOptions,
+    secondary: colors?.dark?.secondary as PaletteColorOptions,
+  },
+});

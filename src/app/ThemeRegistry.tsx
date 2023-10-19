@@ -5,15 +5,22 @@ import { useServerInsertedHTML } from "next/navigation";
 import { CacheProvider } from "@emotion/react";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme from "@/lib/theme";
+import { lightTheme, darkTheme } from "@/lib/theme";
 import { ReactNode, useState } from "react";
 
 type Props = {
   options: Options;
   children: ReactNode;
+  defaultMode: "light" | "dark";
 };
 
-export default function ThemeRegistry({ options, children }: Props) {
+export default function ThemeRegistry({
+  defaultMode = "light",
+  options,
+  children,
+}: Props) {
+  const [mode, setMode] = useState(defaultMode);
+
   const [{ cache, flush }] = useState(() => {
     const cache = createCache(options);
     cache.compat = true;
@@ -56,7 +63,7 @@ export default function ThemeRegistry({ options, children }: Props) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={mode === "light" ? lightTheme : darkTheme}>
         <CssBaseline />
         {children}
       </ThemeProvider>

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Button } from "@mui/material";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Hello WOrld",
@@ -11,7 +11,11 @@ export default function Home() {
   return (
     <main>
       <h1>Hello World</h1>
-      <Button color="secondary">Hello</Button>
+      <h2>Hello World</h2>
+      <h3>Hello World</h3>
+      <p>Hello World</p>
+      <Button variant="contained">Hello</Button>
+      <Button variant="text">Hello</Button>
     </main>
   );
 }
