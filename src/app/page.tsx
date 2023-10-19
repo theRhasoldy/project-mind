@@ -1,5 +1,6 @@
-import { Button } from "@radix-ui/themes";
 import type { Metadata } from "next";
+import "@/styles/globals.css";
+import { Button } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Hello WOrld",
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Button>Mama</Button>
+      <h1>Hello World</h1>
+      <Button color="secondary">Hello</Button>
     </main>
   );
 }

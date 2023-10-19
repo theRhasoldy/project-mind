@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { radixThemePreset } from "radix-themes-tw";
 
 const config: Config = {
   darkMode: "class",
@@ -9,8 +8,21 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    colors: {
+      primary: {
+        main: "#b75566",
+        light: "#b75566",
+        dark: "#b75566",
+        contrastText: "#fff",
+      },
+      secondary: {
+        main: "#ff0",
+        light: "#b75566",
+        dark: "#b75566",
+        contrastText: "#fff",
+      },
+    },
   },
-  presets: [radixThemePreset],
 };
+
 export default config;
