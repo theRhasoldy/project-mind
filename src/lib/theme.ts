@@ -8,6 +8,7 @@ const colors = tailwindConfig.theme?.colors;
 export const lightTheme = createTheme({
   palette: {
     mode: "light",
+    background: colors?.light?.background as PaletteColorOptions,
     primary: colors?.light?.primary as PaletteColorOptions,
     secondary: colors?.light?.secondary as PaletteColorOptions,
   },
@@ -16,6 +17,7 @@ export const lightTheme = createTheme({
 export const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    background: colors?.dark?.background as PaletteColorOptions,
     primary: colors?.dark?.primary as PaletteColorOptions,
     secondary: colors?.dark?.secondary as PaletteColorOptions,
   },
