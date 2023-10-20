@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import ThemeRegistry from "./ThemeRegistry";
+import { Montserrat } from "next/font/google";
+import ThemeRegistry from "@/components/theme/ThemeRegistry";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -11,8 +11,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeRegistry defaultMode="light" options={{ key: "mui" }}>
+      <body className={montserrat.className}>
+        <ThemeRegistry defaultMode="dark" options={{ key: "mui" }}>
           {children}
         </ThemeRegistry>
       </body>
